@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { IManga, IChapter, IPlugin } from '@kagami/plugin';
+import { IManga, IChapter, IPlugin } from '@kagami-cli/plugin';
 import { SingleBar, Presets } from 'cli-progress';
 
 const OUTPUT_DIR = './downloads';

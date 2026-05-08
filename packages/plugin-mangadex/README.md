@@ -1,11 +1,11 @@
-# @kagami/plugin-mangadex
+# @kagami-cli/plugin-mangadex
 
 MangaDex plugin for Kagami manga parser.
 
 ## Installation
 
 ```bash
-npm install @kagami/plugin-mangadex
+npm install @kagami-cli/plugin-mangadex
 ```
 or
 ```bash

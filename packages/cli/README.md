@@ -1,11 +1,11 @@
-# @kagami/cli
+# kagami-cli
 
 CLI tool for Kagami manga parser with interactive interface.
 
 ## Installation
 
 ```bash
-npm install -g @kagami/cli
+npm install -g kagami-cli
 ```
 
 ## Usage

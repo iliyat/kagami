@@ -1,5 +1,5 @@
 import inquirer from 'inquirer';
-import { IManga, IPlugin } from '@kagami/plugin';
+import { IManga, IPlugin } from '@kagami-cli/plugin';
 
 export async function selectSources(availableSources: string[]): Promise<string[]> {
   const answer = await inquirer.prompt({

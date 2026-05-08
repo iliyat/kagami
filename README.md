@@ -13,7 +13,7 @@ Developed with OpenCode and free models.
 ## Installation
 
 ```bash
-npm install -g @kagami/cli
+npm install -g kagami-cli
 ```
 
 ## Usage
@@ -24,10 +24,10 @@ kagami "<search-query>"
 
 ## Packages
 
-- `@kagami/cli` - CLI tool
-- `@kagami/plugin` - Core plugin interfaces and base classes
-- `@kagami/plugin-mangadex` - MangaDex plugin
-- `@kagami/plugin-mangalib` - MangaLib plugin
+- `kagami-cli` - CLI tool
+- `@kagami-cli/plugin` - Core plugin interfaces and base classes
+- `@kagami-cli/plugin-mangadex` - MangaDex plugin
+- `@kagami-cli/plugin-mangalib` - MangaLib plugin
 
 ## License
 

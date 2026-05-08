@@ -1,4 +1,4 @@
-import { IManga, IPlugin } from "@kagami/plugin";
+import { IManga, IPlugin } from "@kagami-cli/plugin";
 
 export async function prepareManga(manga: IManga, plugin: IPlugin, writeStatus?: (msg: string) => void): Promise<void> {
   const status = writeStatus || ((msg: string) => {});

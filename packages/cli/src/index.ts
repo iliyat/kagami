@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { IManga } from "@kagami/plugin";
+import { IManga } from "@kagami-cli/plugin";
 import { selectSources, selectManga, confirmDownload } from './ui';
 import { downloadManga } from './download';
 import { searchManga, prepareManga } from './search';

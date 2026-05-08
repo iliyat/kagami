@@ -1,7 +1,7 @@
-import { Manga } from "@kagami/plugin";
+import { Manga } from "@kagami-cli/plugin";
 import { MangaLib } from "./types";
-import { RestPlugin } from "@kagami/plugin";
-import { IPlugin, IManga, IChapter } from "@kagami/plugin";
+import { RestPlugin } from "@kagami-cli/plugin";
+import { IPlugin, IManga, IChapter } from "@kagami-cli/plugin";
 
 export class MangaLibPlugin extends RestPlugin implements IPlugin {
   private readonly siteId = 1;

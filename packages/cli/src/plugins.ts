@@ -2,7 +2,7 @@ import * as path from 'path';
 import * as fs from 'fs';
 import { exec } from 'child_process';
 import { promisify } from 'util';
-import { IPlugin } from "@kagami/plugin";
+import { IPlugin } from "@kagami-cli/plugin";
 
 const execAsync = promisify(exec);
 
@@ -103,8 +103,8 @@ export async function installPlugin(sourceName: string) {
   }
 
   const candidates = [
-    `@kagami/plugin-${sourceName}`,
-    `kagami-plugin-${sourceName}`
+    `@kagami-cli/plugin-${sourceName}`,
+    `kagami-cli-plugin-${sourceName}`
   ];
 
   for (const pkg of candidates) {

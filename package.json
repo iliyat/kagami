@@ -11,10 +11,11 @@
   },
   "homepage": "https://github.com/iliyat/kagami#readme",
   "workspaces": ["packages/*"],
-  "scripts": {
+"scripts": {
     "build": "npm run build -w packages",
     "clean": "rm -rf packages/*/dist packages/*/tsconfig.tsbuildinfo",
-    "publish-all": "npm run build && bash publish.sh"
+    "publish-all": "npm run build && bash publish.sh",
+    "bump": "npm version patch --workspaces && npm install"
   },
   "devDependencies": {
     "@types/node": "^25.4.0",

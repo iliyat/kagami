@@ -1,11 +1,11 @@
-# @kagami/plugin-mangalib
+# @kagami-cli/plugin-mangalib
 
 MangaLib plugin for Kagami manga parser.
 
 ## Installation
 
 ```bash
-npm install @kagami/plugin-mangalib
+npm install @kagami-cli/plugin-mangalib
 ```
 or
 ```bash
