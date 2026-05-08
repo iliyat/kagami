@@ -19,22 +19,21 @@ jobs:
           node-version: '22'
           registry-url: 'https://registry.npmjs.org'
       
+      - name: Update npm
+        run: npm install -g npm@latest
+      
       - run: npm ci
       
       - run: npm run build
       
       - name: Publish @kagami-cli/plugin
-        working-directory: packages/plugin
-        run: npm publish
+        run: npm publish -w packages/plugin
       
       - name: Publish @kagami-cli/plugin-mangadex
-        working-directory: packages/plugin-mangadex
-        run: npm publish
+        run: npm publish -w packages/plugin-mangadex
       
       - name: Publish @kagami-cli/plugin-mangalib
-        working-directory: packages/plugin-mangalib
-        run: npm publish
+        run: npm publish -w packages/plugin-mangalib
       
       - name: Publish kagami-cli
-        working-directory: packages/cli
-        run: npm publish
+        run: npm publish -w packages/cli
