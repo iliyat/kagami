@@ -5,6 +5,11 @@
   "private": true,
   "license": "MIT",
   "author": "Ilya Tovstenok <iliya.tovstyonok@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iliyat/kagami.git"
+  },
+  "homepage": "https://github.com/iliyat/kagami#readme",
   "workspaces": ["packages/*"],
   "scripts": {
     "build": "npm run build -w packages",

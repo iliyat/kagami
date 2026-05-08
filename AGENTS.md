@@ -1,5 +1,7 @@
 # AGENTS.md
 
+Repository: https://github.com/iliyat/kagami
+
 ## Monorepo Structure
 - Root workspace: npm workspaces with 4 packages in `packages/`
 - `@kagami/plugin`: Core interfaces (IManga, IChapter, IPlugin) and base classes (RestPlugin, Provider, Manga)

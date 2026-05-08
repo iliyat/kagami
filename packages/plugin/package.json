@@ -21,5 +21,11 @@
   },
   "keywords": ["manga", "parser", "kagami", "plugin"],
   "author": "Ilya Tovstenok <iliya.tovstyonok@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iliyat/kagami.git",
+    "directory": "packages/plugin"
+  },
+  "homepage": "https://github.com/iliyat/kagami#readme"
 }

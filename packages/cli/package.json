@@ -27,6 +27,12 @@
   "keywords": ["manga", "parser", "cli", "kagami"],
   "author": "Ilya Tovstenok <iliya.tovstyonok@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iliyat/kagami.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://github.com/iliyat/kagami#readme",
   "dependencies": {
     "@kagami/plugin": "^0.1.0",
     "cli-progress": "^3.12.0",
