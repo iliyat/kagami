@@ -1,5 +1,5 @@
 {
-  "name": "@kagami/plugin",
+  "name": "@kagami-cli/plugin",
   "version": "0.1.0",
   "description": "Core plugin interfaces and base classes for kagami",
   "main": "dist/index.js",
@@ -27,5 +27,6 @@
     "url": "git+https://github.com/iliyat/kagami.git",
     "directory": "packages/plugin"
   },
+  "homepage": "https://github.com/iliyat/kagami#readme",
   "homepage": "https://github.com/iliyat/kagami#readme"
 }

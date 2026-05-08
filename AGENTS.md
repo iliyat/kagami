@@ -4,10 +4,10 @@ Repository: https://github.com/iliyat/kagami
 
 ## Monorepo Structure
 - Root workspace: npm workspaces with 4 packages in `packages/`
-- `@kagami/plugin`: Core interfaces (IManga, IChapter, IPlugin) and base classes (RestPlugin, Provider, Manga)
-- `@kagami/plugin-mangadex`: MangaDex plugin implementation
-- `@kagami/plugin-mangalib`: MangaLib plugin implementation
-- `@kagami/cli`: CLI entry point with binary name `kagami`
+- `@kagami-cli/plugin`: Core interfaces (IManga, IChapter, IPlugin) and base classes (RestPlugin, Provider, Manga)
+- `@kagami-cli/plugin-mangadex`: MangaDex plugin implementation
+- `@kagami-cli/plugin-mangalib`: MangaLib plugin implementation
+- `kagami-cli`: CLI entry point with binary name `kagami`
 
 ## Build
 - `npm run build` builds all packages in order (via `npm run build -w packages`)
@@ -31,11 +31,12 @@ Repository: https://github.com/iliyat/kagami
 - `getChapterPages` accepts `IChapter` object (contains id, number, mangaId, volume)
 - MangaLib requires headers: `Site-Id: 1`, `Referer: https://mangalib.me/`, `User-Agent`, `Accept: application/json`
 - MangaLib API: needs `volume` parameter for chapter pages (passed via IChapter object)
-- To add new plugin: create `packages/plugin-<name>/`, extend RestPlugin, add to `@kagami/cli` dependencies and plugins.ts
+- To add new plugin: create `packages/plugin-<name>/`, extend RestPlugin, add to `kagami-cli` dependencies and plugins.ts
 
 ## Publishing
-- All `@kagami/*` packages have `publishConfig.access: "public"` for scoped package publishing
+- Scoped packages (`@kagami-cli/*`) have `publishConfig.access: "public"` for scoped package publishing
+- `kagami-cli` (unscoped) also publishes with public access
 - `prepublishOnly` script runs build automatically before publish
-- Publish order matters: `@kagami/plugin` → `@kagami/plugin-mangadex` → `@kagami/plugin-mangalib` → `@kagami/cli`
+- Publish order matters: `@kagami-cli/plugin` → `@kagami-cli/plugin-mangadex` → `@kagami-cli/plugin-mangalib` → `kagami-cli`
 - Use `npm run publish-all` from root to build and publish all packages in correct order
 - Or manually: `npm publish -w packages/<package-name>` for individual packages

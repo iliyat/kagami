@@ -1,5 +1,5 @@
 {
-  "name": "@kagami/plugin-mangalib",
+  "name": "@kagami-cli/plugin-mangalib",
   "version": "0.1.0",
   "description": "MangaLib plugin for kagami",
   "main": "dist/index.js",
@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/iliyat/kagami#readme",
   "dependencies": {
-    "@kagami/plugin": "^0.1.0"
+    "@kagami-cli/plugin": "^0.1.0"
   },
   "devDependencies": {
     "typescript": "^5.5.3"

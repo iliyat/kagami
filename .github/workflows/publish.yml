@@ -23,18 +23,18 @@ jobs:
       
       - run: npm run build
       
-      - name: Publish @kagami/plugin
+      - name: Publish @kagami-cli/plugin
         working-directory: packages/plugin
         run: npm publish
       
-      - name: Publish @kagami/plugin-mangadex
+      - name: Publish @kagami-cli/plugin-mangadex
         working-directory: packages/plugin-mangadex
         run: npm publish
       
-      - name: Publish @kagami/plugin-mangalib
+      - name: Publish @kagami-cli/plugin-mangalib
         working-directory: packages/plugin-mangalib
         run: npm publish
       
-      - name: Publish @kagami/cli
+      - name: Publish kagami-cli
         working-directory: packages/cli
         run: npm publish
