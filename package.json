@@ -1,0 +1,15 @@
+{
+  "name": "@kagami/monorepo",
+  "version": "0.1.0",
+  "description": "Kagami monorepo",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "build": "npm run build -w packages",
+    "clean": "rm -rf packages/*/dist packages/*/tsconfig.tsbuildinfo"
+  },
+  "devDependencies": {
+    "@types/node": "^25.4.0",
+    "typescript": "^5.5.3"
+  }
+}

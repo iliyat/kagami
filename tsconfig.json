@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": false,
+    "noEmit": false
+  },
+  "files": [],
+  "references": [
+    { "path": "packages/plugin" },
+    { "path": "packages/plugin-mangadex" },
+    { "path": "packages/plugin-mangalib" },
+    { "path": "packages/cli" }
+  ]
+}

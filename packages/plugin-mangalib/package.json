@@ -1,0 +1,17 @@
+{
+  "name": "@kagami/plugin-mangalib",
+  "version": "0.1.0",
+  "description": "MangaLib plugin for kagami",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc --build"
+  },
+  "dependencies": {
+    "@kagami/plugin": "^0.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.3"
+  }
+}
