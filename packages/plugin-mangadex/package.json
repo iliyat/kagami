@@ -1,6 +1,6 @@
 {
   "name": "@kagami-cli/plugin-mangadex",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MangaDex plugin for kagami",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,7 +11,9 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc --build",
     "prepublishOnly": "npm run build"
@@ -19,7 +21,12 @@
   "publishConfig": {
     "access": "public"
   },
-  "keywords": ["manga", "parser", "kagami", "mangadex"],
+  "keywords": [
+    "manga",
+    "parser",
+    "kagami",
+    "mangadex"
+  ],
   "author": "Ilya Tovstenok <iliya.tovstyonok@gmail.com>",
   "license": "MIT",
   "repository": {

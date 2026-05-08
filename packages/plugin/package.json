@@ -1,6 +1,6 @@
 {
   "name": "@kagami-cli/plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Core plugin interfaces and base classes for kagami",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,7 +11,9 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc --build",
     "prepublishOnly": "npm run build"
@@ -19,7 +21,12 @@
   "publishConfig": {
     "access": "public"
   },
-  "keywords": ["manga", "parser", "kagami", "plugin"],
+  "keywords": [
+    "manga",
+    "parser",
+    "kagami",
+    "plugin"
+  ],
   "author": "Ilya Tovstenok <iliya.tovstyonok@gmail.com>",
   "license": "MIT",
   "repository": {
@@ -27,6 +34,5 @@
     "url": "git+https://github.com/iliyat/kagami.git",
     "directory": "packages/plugin"
   },
-  "homepage": "https://github.com/iliyat/kagami#readme",
   "homepage": "https://github.com/iliyat/kagami#readme"
 }

@@ -1,6 +1,6 @@
 {
   "name": "kagami-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "CLI for kagami",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -24,7 +24,12 @@
   "publishConfig": {
     "access": "public"
   },
-  "keywords": ["manga", "parser", "cli", "kagami"],
+  "keywords": [
+    "manga",
+    "parser",
+    "cli",
+    "kagami"
+  ],
   "author": "Ilya Tovstenok <iliya.tovstyonok@gmail.com>",
   "license": "MIT",
   "repository": {
