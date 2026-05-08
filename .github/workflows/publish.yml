@@ -16,21 +16,24 @@ jobs:
       
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
           registry-url: 'https://registry.npmjs.org'
       
-      - name: Debug OIDC token availability
-        run: |
-          echo "Checking if OIDC token URL is available..."
-          if [ -n "$ACTIONS_ID_TOKEN_REQUEST_URL" ]; then
-            echo "OIDC token URL is set"
-          else
-            echo "WARNING: OIDC token URL is NOT set"
-          fi
+      - name: Check npm version
+        run: npm --version
       
       - run: npm ci
       
       - run: npm run build
       
-      - name: Publish @kagami-cli/plugin only (test)
-        run: cd packages/plugin && npm publish
+      - name: Publish @kagami-cli/plugin
+        run: npm publish -w packages/plugin
+      
+      - name: Publish @kagami-cli/plugin-mangadex
+        run: npm publish -w packages/plugin-mangadex
+      
+      - name: Publish @kagami-cli/plugin-mangalib
+        run: npm publish -w packages/plugin-mangalib
+      
+      - name: Publish kagami-cli
+        run: npm publish -w packages/cli
