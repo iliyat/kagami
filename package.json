@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "description": "Kagami monorepo",
   "private": true,
+  "license": "MIT",
+  "author": "Ilya Tovstenok <iliya.tovstyonok@gmail.com>",
   "workspaces": ["packages/*"],
   "scripts": {
     "build": "npm run build -w packages",
-    "clean": "rm -rf packages/*/dist packages/*/tsconfig.tsbuildinfo"
+    "clean": "rm -rf packages/*/dist packages/*/tsconfig.tsbuildinfo",
+    "publish-all": "npm run build && bash publish.sh"
   },
   "devDependencies": {
     "@types/node": "^25.4.0",

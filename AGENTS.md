@@ -15,12 +15,10 @@
 
 ## CLI
 - Entry: `npx . "<search-query>"` (from root or packages/cli)
-- Binary name: `kagami` (not `manga-parser`)
+- Binary name: `kagami`
 - Interactive workflow: source selection → search → results display → manga selection → download
-- Currently only MangaDex plugin works (MangaLib returns 403 from cdnlibs.org)
 
 ## Testing
-- **Never use `npm link`** for testing
 - Test via `cd packages/cli && npx . "<query>"` (local test)
 - Interactive prompts require real terminal input (can't test via bash tool)
 
@@ -32,3 +30,10 @@
 - MangaLib requires headers: `Site-Id: 1`, `Referer: https://mangalib.me/`, `User-Agent`, `Accept: application/json`
 - MangaLib API: needs `volume` parameter for chapter pages (passed via IChapter object)
 - To add new plugin: create `packages/plugin-<name>/`, extend RestPlugin, add to `@kagami/cli` dependencies and plugins.ts
+
+## Publishing
+- All `@kagami/*` packages have `publishConfig.access: "public"` for scoped package publishing
+- `prepublishOnly` script runs build automatically before publish
+- Publish order matters: `@kagami/plugin` → `@kagami/plugin-mangadex` → `@kagami/plugin-mangalib` → `@kagami/cli`
+- Use `npm run publish-all` from root to build and publish all packages in correct order
+- Or manually: `npm publish -w packages/<package-name>` for individual packages

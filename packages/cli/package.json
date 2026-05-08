@@ -4,6 +4,13 @@
   "description": "CLI for kagami",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "bin": {
     "kagami": "./dist/index.js"
   },
@@ -11,8 +18,15 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc --build"
+    "build": "tsc --build",
+    "prepublishOnly": "npm run build"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": ["manga", "parser", "cli", "kagami"],
+  "author": "Ilya Tovstenok <iliya.tovstyonok@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "@kagami/plugin": "^0.1.0",
     "cli-progress": "^3.12.0",
