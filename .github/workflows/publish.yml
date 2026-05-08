@@ -5,7 +5,7 @@ on:
     types: [published]
 
 permissions:
-  id-token: write  # Required for OIDC
+  id-token: write
   contents: read
 
 jobs:
@@ -19,21 +19,18 @@ jobs:
           node-version: '22'
           registry-url: 'https://registry.npmjs.org'
       
-      - name: Update npm
-        run: npm install -g npm@latest
+      - name: Debug OIDC token availability
+        run: |
+          echo "Checking if OIDC token URL is available..."
+          if [ -n "$ACTIONS_ID_TOKEN_REQUEST_URL" ]; then
+            echo "OIDC token URL is set"
+          else
+            echo "WARNING: OIDC token URL is NOT set"
+          fi
       
       - run: npm ci
       
       - run: npm run build
       
-      - name: Publish @kagami-cli/plugin
-        run: npm publish -w packages/plugin
-      
-      - name: Publish @kagami-cli/plugin-mangadex
-        run: npm publish -w packages/plugin-mangadex
-      
-      - name: Publish @kagami-cli/plugin-mangalib
-        run: npm publish -w packages/plugin-mangalib
-      
-      - name: Publish kagami-cli
-        run: npm publish -w packages/cli
+      - name: Publish @kagami-cli/plugin only (test)
+        run: cd packages/plugin && npm publish
