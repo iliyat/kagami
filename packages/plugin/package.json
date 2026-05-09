@@ -1,6 +1,6 @@
 {
   "name": "@kagami-cli/plugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Core plugin interfaces and base classes for kagami",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -1,6 +1,6 @@
 {
   "name": "@kagami-cli/plugin-mangadex",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "MangaDex plugin for kagami",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
