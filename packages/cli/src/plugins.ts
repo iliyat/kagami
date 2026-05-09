@@ -46,8 +46,8 @@ export async function discoverPlugins(): Promise<Record<string, IPlugin>> {
 
   if (!fs.existsSync(nodeModules)) return plugins;
 
-  // Check @kagami scope
-  const kagamiScope = path.join(nodeModules, '@kagami');
+  // Check @kagami-cli scope
+  const kagamiScope = path.join(nodeModules, '@kagami-cli');
   if (fs.existsSync(kagamiScope)) {
     const dirs = fs.readdirSync(kagamiScope);
     for (const dir of dirs) {
@@ -60,7 +60,7 @@ export async function discoverPlugins(): Promise<Record<string, IPlugin>> {
             plugins[plugin.key] = plugin;
           }
         } catch (e) {
-          console.warn(`Failed to load plugin @kagami/${dir}:`, e);
+          console.warn(`Failed to load plugin @kagami-cli/${dir}:`, e);
         }
       }
     }
